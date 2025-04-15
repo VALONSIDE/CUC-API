@@ -16,11 +16,11 @@
   
   在窗口中输入 `cmd` 并按回车键，打开 CMD 控制台。
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-49-03-image.png)
+  ![](\images\2025-04-15-07-49-03-image.png)
   
   在弹出的窗口中输入 `curl --help` 。
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-49-53-image.png)
+  ![](\images\2025-04-15-07-49-53-image.png)
   
   如果您的电脑有与上图类似的输出，则表示 curl 工具已经正常安装。否则**请参考下面的安装流程**：[https://zhuanlan.zhihu.com/p/447058975/]()
 
@@ -38,12 +38,12 @@
 - **示例响应**  
   成功调用后，控制台显示包含 `content`（正式回答）和 `reasoning_content`（思考过程）的响应：
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-17-54-image.png)
+  ![](\images\2025-04-15-08-17-54-image.png)
 
 - **自定义消息内容**  
   修改 `system` 或 `user` 字段内容（如设置日语机器人），响应结果中 `content` 会按规则返回：
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-18-44-image.png)
+  ![](\images\2025-04-15-08-18-44-image.png)
 
 ### 二、在 Linux 下使用 curl 直接调用
 
@@ -56,11 +56,11 @@
 1. **获取管理员权限**  
    打开系统终端，输入 `su` 并输入管理员密码，获取管理员权限：
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-45-48-image.png)
+   ![](\images\2025-04-15-07-45-48-image.png)
 
 2. **选择系统对应的软件源**
    以 Debian 12 为例，访问清华大学软件源文档： [debian | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)。  
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-45-53-image.png)
+   ![](\images\2025-04-15-07-45-53-image.png)
 
 3. **编辑软件源配置文件**  
    在终端输入 `sudo vim /etc/apt/sources.list`，使用 vim 编辑器打开文件，按 `i` 键进入编辑模式。
@@ -68,7 +68,7 @@
 4. **替换软件源内容**  
    根据系统版本，从清华源文档复制对应软件源，注释原有内容并粘贴新源（示例如下）：
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-45-58-image.png)
+   ![](\images\2025-04-15-07-45-58-image.png)
 
 5. **保存并退出**  
    按 `ESC` 键退出编辑模式，输入 `:wq!` 保存并退出。
@@ -81,7 +81,7 @@
 2. **安装 curl**  
    输入 `sudo apt-get install curl`，等待下载并确认安装，成功后显示如下（示例）：
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-46-04-image.png)
+   ![](\images\2025-04-15-07-46-04-image.png)
 
 #### 步骤三：调用校园 DeepSeek API
 
@@ -95,12 +95,12 @@
 - **示例响应**  
   成功调用后，终端显示包含 `content`（正式回答）和 `reasoning_content`（思考过程）的响应：
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-46-15-image.png)
+  ![](\images\2025-04-15-07-46-15-image.png)
 
 - **自定义消息内容**  
   修改 `system` 或 `user` 字段内容（如设置日语机器人），响应结果中 `content` 会按规则返回：
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-46-22-image.png)
+  ![](\images\2025-04-15-07-46-22-image.png)
 
 ### 三、编写 Python 脚本进行连续对话
 
@@ -114,7 +114,7 @@
    https://www.python.org/downloads/
    ```
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-19-49-image.png)
+   ![](\images\2025-04-15-08-19-49-image.png)
    
    然后打开 VSCode 官网，选择适合您系统版本的代码编辑器并安装到本地。
    
@@ -122,11 +122,11 @@
    https://code.visualstudio.com/
    ```
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-20-20-image.png)
+   ![](\images\2025-04-15-08-20-20-image.png)
    
    您可以打开 VSCode 并在左侧插件栏目搜索 `Chinese` ，下载并安装汉化插件。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-21-13-image.png)
+   ![](\images\2025-04-15-08-21-13-image.png)
    
    安装完成之后重启 VSCode ，即可使用汉化的开发环境。
 
@@ -134,11 +134,11 @@
    
    打开 VSCode ，打开一个项目文件夹，准备编写 Python 代码。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-21-49-image.png)
+   ![](\images\2025-04-15-08-21-49-image.png)
    
    点击右上角的 “切换面板” 按钮，弹出下方的终端界面。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-22-20-image.png)
+   ![](\images\2025-04-15-08-22-20-image.png)
    
    在终端中分别粘贴下面两行代码，将PYPI源切换到清华大学镜像站。
    
@@ -162,7 +162,7 @@
    
    如果终端中显示如下结果，则表示安装成功。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-26-06-image.png)
+   ![](\images\2025-04-15-08-26-06-image.png)
 
 #### 编写脚本
 
@@ -176,7 +176,7 @@
   
   点击右上角的 `Code` ，然后点击 `Download ZIP` 。
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-27-57-image.png)
+  ![](\images\2025-04-15-08-27-57-image.png)
   
   如果您无法下载，您也可以新建 Python 文件，复制以下代码（需替换 `API-KEY` ）：
   
@@ -299,26 +299,26 @@
 1. **选择模式**  
    点击右上角小三角启动按钮启动脚本，启动后选择 `1 - 普通模式`（完整输出）或 `2 - 流式模式`（逐字输出）。您可以输入数字`1`或`2`，并按回车键确认选择。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-30-30-image.png)
+   ![](\images\2025-04-15-08-30-30-image.png)
    
    `普通模式` 就是在提问后将思考过程和结果**一次性提供**，您可能需要等待一小段时间才能看到生成结果。下面是 “普通模式” 的使用示例：
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-31-58-image.png)
+   ![](\images\2025-04-15-08-31-58-image.png)
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-32-12-image.png)
+   ![](\images\2025-04-15-08-32-12-image.png)
    
    `流式模式` 则是在提问后将思考过程和结果**逐字输出**，您可以立即看见人工智能的输出过程。下面是 “流式模式” 的使用示例：
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-31-10-image.png)
+   ![](\images\2025-04-15-08-31-10-image.png)
 
 2. **开始对话**  
    出现 `你:` 提示后，您可以输入问题，并按回车键发送，程序自动维护对话历史。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-32-12-image.png)
+   ![](\images\2025-04-15-08-32-12-image.png)
    
    若您对话完成，您可以输入 “结束” 或者 “quit” 并按回车来结束程序。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-32-29-image.png)
+   ![](\images\2025-04-15-08-32-29-image.png)
 
 ### 四、使用 Postman 进行可视化调用
 
@@ -326,24 +326,24 @@
 
 1. 以 Debian 12 为例，从官网 https://www.postman.com/downloads/ 下载适合版本。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-47-08-image.png)
+   ![](\images\2025-04-15-07-47-08-image.png)
 
 2. 解压下载的 tar.gz 包。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-47-12-image.png)
+   ![](\images\2025-04-15-07-47-12-image.png)
 
 3. 启动 Postman 。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-47-15-image.png)
+   ![](\images\2025-04-15-07-47-15-image.png)
 
 #### 步骤二：配置请求参数
 
 1. **新建 HTTP 请求**  
    点击 “File→New→HTTP”，将请求方法设为 POST 。
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-47-55-image.png)
+   ![](\images\2025-04-15-07-47-55-image.png)
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-47-58-image.png)
+   ![](\images\2025-04-15-07-47-58-image.png)
 
 2. **设置 Headers**  
    添加两个 Key-Value 对：
@@ -351,7 +351,7 @@
    - `Content-Type: application/json`
    - `Authorization: Bearer 你的API-KEY`（注意 Bearer 后有空格）  
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-08-39-14-image.png)
+   ![](\images\2025-04-15-08-39-14-image.png)
    
    **<u>这里填写的时候请格外注意，在标签栏中选择选择 `Headers` ，千万不要填写到 `Params` 里面！</u>**
 
@@ -366,7 +366,7 @@
    }
    ```
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-48-09-image.png)
+   ![](\images\2025-04-15-07-48-09-image.png)
 
 4. 在上方的地址栏输入下面的API地址。
    
@@ -374,10 +374,10 @@
    https://aihub.cuc.edu.cn/console/v1/chat/completions
    ```
    
-   ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-48-21-image.png)
+   ![](\images\2025-04-15-07-48-21-image.png)
 
 #### 步骤三：发送请求并查看结果
 
 - 点击 “Send“ ，查看下方显示响应内容，确认操作是否正确：
   
-  ![](C:\Users\VALON\AppData\Roaming\marktext\images\2025-04-15-07-48-32-image.png)
+  ![](\images\2025-04-15-07-48-32-image.png)
