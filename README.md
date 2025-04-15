@@ -4,13 +4,13 @@
 
 「测试」第二版：2025 年 04 月 14 日
 
-<u>**特别注意：中国传媒大学API仅可以在学校网络环境下调用，请确保在操作前连接学校网络，否则API将无法使用！**</u>
+<u>**特别注意：中国传媒大学 API 仅可以在学校网络环境下调用，请确保在操作前连接学校网络，否则 API 将无法使用！**</u>
 
 ### 一、使用 Postman 进行可视化调用
 
 #### 步骤一：下载并解压 Postman
 
-1. 以 Debian 12 为例，从官网 https://www.postman.com/downloads/ 下载适合版本。
+1. 以 Debian 12 为例，从官网 [Download Postman | Get Started for Free](https://www.postman.com/downloads/) 下载适合版本。
    
    ![image](images/2025-04-15-07-47-08-image.png)
 
@@ -84,14 +84,14 @@
   
   ![image](images/2025-04-15-07-49-53-image.png)
   
-  如果您的电脑有与上图类似的输出，则表示 curl 工具已经正常安装。否则**请参考下面的安装流程**：[https://zhuanlan.zhihu.com/p/447058975/]()
+  如果您的电脑有与上图类似的输出，则表示 curl 工具已经正常安装。否则**请参考下面的安装流程**：[CURL windows下安装及常用命令指南](https://zhuanlan.zhihu.com/p/447058975/)。
 
 #### 步骤二：调用校园 DeepSeek API
 
 - **构造请求命令**  
   复制以下命令，将 `{API-KEY}` 替换为学校提供的 Key（删除花括号，格式为 `Bearer sk-xxxxxxxx`），并填入 CMD 控制台中。
   
-  **<u>特别注意：由于Windows规范，该命令与 Linux 环境下的命令有些许差异！</u>**
+  **<u>特别注意：由于 Windows 规范，该命令与 Linux 环境下的命令有些许差异！</u>**
   
   ```plaintext
   curl -X POST "https://aihub.cuc.edu.cn/console/v1/chat/completions" -H "Content-Type: application/json" -H "Authorization: Bearer {API-KEY}" -d "{\"model\": \"DeepSeek-R1-Distill-Qwen-32B\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"你好\"}], \"stream\": false}"
@@ -170,19 +170,15 @@
 
 1. **使用VSCode代码编辑器编写代码**
    
-   首先安装 Python ，从官网选择适合您系统版本的 Python 软件并安装到本地。
-   
-   ```url
-   https://www.python.org/downloads/
-   ```
+   首先进入 Python 官网：[Download the latest version of Python](https://www.python.org/downloads/)。
+
+   下载并安装 Python ，从官网选择适合您系统版本的 Python 软件并安装到本地。
    
    ![image](images/2025-04-15-08-19-49-image.png)
    
-   然后打开 VSCode 官网，选择适合您系统版本的代码编辑器并安装到本地。
-   
-   ```url
-   https://code.visualstudio.com/
-   ```
+   然后打开 VSCode 官网：[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)。
+
+   在网站中选择适合您系统版本的代码编辑器并安装到本地。
    
    ![image](images/2025-04-15-08-20-20-image.png)
    
