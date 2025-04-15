@@ -6,7 +6,69 @@
 
 <u>**特别注意：中国传媒大学API仅可以在学校网络环境下调用，请确保在操作前连接学校网络，否则API将无法使用！**</u>
 
-### 一、在 Windows 下使用 curl 直接调用
+### 一、使用 Postman 进行可视化调用
+
+#### 步骤一：下载并解压 Postman
+
+1. 以 Debian 12 为例，从官网 https://www.postman.com/downloads/ 下载适合版本。
+   
+   ![image](images/2025-04-15-07-47-08-image.png)
+
+2. 解压下载的 tar.gz 包。
+   
+   ![image](images/2025-04-15-07-47-12-image.png)
+
+3. 启动 Postman 。
+   
+   ![image](images/2025-04-15-07-47-15-image.png)
+
+#### 步骤二：配置请求参数
+
+1. **新建 HTTP 请求**  
+   点击 “File→New→HTTP”，将请求方法设为 POST 。
+   
+   ![image](images/2025-04-15-07-47-55-image.png)
+   
+   ![image](images/2025-04-15-07-47-58-image.png)
+
+2. **设置 Headers**  
+   添加两个 Key-Value 对：
+   
+   - `Content-Type: application/json`
+   - `Authorization: Bearer 你的API-KEY`（注意 Bearer 后有空格）  
+   
+   ![image](images/2025-04-15-08-39-14-image.png)
+   
+   **<u>这里填写的时候请格外注意，在标签栏中选择选择 `Headers` ，千万不要填写到 `Params` 里面！</u>**
+
+3. ```json
+   {
+     "model": "DeepSeek-R1-Distill-Qwen-32B",
+     "messages": [
+       {"role": "system", "content": "你是一个智能助手"},
+       {"role": "user", "content": "你好"}
+     ],
+     "stream": false
+   }
+   ```
+   
+   ![image](images/2025-04-15-07-48-09-image.png)
+
+4. 在上方的地址栏输入下面的API地址。
+   
+   ```url
+   https://aihub.cuc.edu.cn/console/v1/chat/completions
+   ```
+   
+   ![image](images/2025-04-15-07-48-21-image.png)
+
+#### 步骤三：发送请求并查看结果
+
+- 点击 “Send“ ，查看下方显示响应内容，确认操作是否正确：
+  
+  ![image](images/2025-04-15-07-48-32-image.png)
+
+### 二、在 Windows 下使用 curl 直接调用
 
 #### 步骤一：检查系统中的 curl 工具
 
@@ -45,7 +107,7 @@
   
   ![image](images/2025-04-15-08-18-44-image.png)
 
-### 二、在 Linux 下使用 curl 直接调用
+### 三、在 Linux 下使用 curl 直接调用
 
 #### 注意
 
@@ -102,7 +164,7 @@
   
   ![image](images/2025-04-15-07-46-22-image.png)
 
-### 三、编写 Python 脚本进行连续对话
+### 四、编写 Python 脚本进行连续对话
 
 #### 环境准备
 
@@ -319,65 +381,3 @@
    若您对话完成，您可以输入 “结束” 或者 “quit” 并按回车来结束程序。
    
    ![image](images/2025-04-15-08-32-29-image.png)
-
-### 四、使用 Postman 进行可视化调用
-
-#### 步骤一：下载并解压 Postman
-
-1. 以 Debian 12 为例，从官网 https://www.postman.com/downloads/ 下载适合版本。
-   
-   ![image](images/2025-04-15-07-47-08-image.png)
-
-2. 解压下载的 tar.gz 包。
-   
-   ![image](images/2025-04-15-07-47-12-image.png)
-
-3. 启动 Postman 。
-   
-   ![image](images/2025-04-15-07-47-15-image.png)
-
-#### 步骤二：配置请求参数
-
-1. **新建 HTTP 请求**  
-   点击 “File→New→HTTP”，将请求方法设为 POST 。
-   
-   ![image](images/2025-04-15-07-47-55-image.png)
-   
-   ![image](images/2025-04-15-07-47-58-image.png)
-
-2. **设置 Headers**  
-   添加两个 Key-Value 对：
-   
-   - `Content-Type: application/json`
-   - `Authorization: Bearer 你的API-KEY`（注意 Bearer 后有空格）  
-   
-   ![image](images/2025-04-15-08-39-14-image.png)
-   
-   **<u>这里填写的时候请格外注意，在标签栏中选择选择 `Headers` ，千万不要填写到 `Params` 里面！</u>**
-
-3. ```json
-   {
-     "model": "DeepSeek-R1-Distill-Qwen-32B",
-     "messages": [
-       {"role": "system", "content": "你是一个智能助手"},
-       {"role": "user", "content": "你好"}
-     ],
-     "stream": false
-   }
-   ```
-   
-   ![image](images/2025-04-15-07-48-09-image.png)
-
-4. 在上方的地址栏输入下面的API地址。
-   
-   ```url
-   https://aihub.cuc.edu.cn/console/v1/chat/completions
-   ```
-   
-   ![image](images/2025-04-15-07-48-21-image.png)
-
-#### 步骤三：发送请求并查看结果
-
-- 点击 “Send“ ，查看下方显示响应内容，确认操作是否正确：
-  
-  ![image](images/2025-04-15-07-48-32-image.png)
