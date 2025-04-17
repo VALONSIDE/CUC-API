@@ -86,7 +86,7 @@
   
   ![image](images/2025-04-15-07-49-53-image.png)
   
-  如果您的电脑有与上图类似的输出，则表示 curl 工具已经正常安装。否则**请参考下面的安装流程**：[CURL windows下安装及常用命令指南](https://zhuanlan.zhihu.com/p/447058975/)。
+  如果您的电脑有与上图类似的输出，则表示 curl 工具已经正常安装。否则**请参考下面的安装流程**：[CURL windows下安装及常用命令指南]([https://zhuanlan.zhihu.com/p/447058975/](https://blog.csdn.net/qq_42102911/article/details/127172463))。
 
 #### 步骤二：调用校园 DeepSeek API
 
